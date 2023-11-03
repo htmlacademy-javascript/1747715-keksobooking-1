@@ -1,5 +1,8 @@
 import { priceInput, typeOfHousingSelect, typeOfHousingOptions } from './validator.js';
 
+const MAX_PRICE = 50000;
+const SLIDER_COUNT_START = 80;
+
 const sliderElement = document.querySelector('.ad-form__slider');
 
 const getMinPrice = () => {
@@ -12,9 +15,9 @@ const getMinPrice = () => {
 noUiSlider.create(sliderElement, {
   range: {
     min: getMinPrice(),
-    max: 50000,
+    max: MAX_PRICE,
   },
-  start: 80,
+  start: SLIDER_COUNT_START,
   step: 1,
   connect: 'lower',
   format: {
@@ -38,7 +41,7 @@ typeOfHousingSelect.addEventListener('change', () => {
   sliderElement.noUiSlider.updateOptions({
     range: {
       min: getMinPrice(),
-      max: 50000
+      max: MAX_PRICE
     }
   });
 });

@@ -85,13 +85,13 @@ const validateTypeAndPrice = () => {
 // Функция, которая блокирует кнопку отправки формы
 
 const blockSubmitButton = () => {
-  submitButton.disabled = true;
+  submitButton.setAttribute('disabled', true);
 };
 
 // Функция, которая разблокирует кнопку отправки формы
 
 const unblockSubmitButton = () => {
-  submitButton.disabled = false;
+  submitButton.removeAttribute('disabled');
 };
 
 // Функция, которая возвращает формы и карту в изначальное состояние

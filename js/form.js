@@ -12,7 +12,7 @@ const setDisabledFormElements = (form) => {
   const buttons = form.querySelectorAll('button');
 
   [...inputs, ...selects, ...textareas, ...buttons].forEach((element) => {
-    element.disabled = true;
+    element.setAttribute('disabled', true);
   });
   sliderElement.setAttribute('disabled', true);
 };
@@ -26,9 +26,9 @@ const setEnabledFormElements = (form) => {
   const buttons = form.querySelectorAll('button');
 
   [...inputs, ...selects, ...textareas, ...buttons].forEach((element) => {
-    element.disabled = false;
+    element.removeAttribute('disabled');
   });
-  sliderElement.removeAttribute('disabled', true);
+  sliderElement.removeAttribute('disabled');
 };
 
 // Перевод фильтров в НЕактивное состояние

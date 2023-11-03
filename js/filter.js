@@ -39,13 +39,15 @@ const showByPrice = ({offer}) => {
 const showByRoomsCount = ({offer}) => {
   if (roomsCountSelect.value === DEFAULT_OPTION_VALUE) {
     return true;
-  } return offer.rooms === +roomsCountSelect.value;
+  }
+  return offer.rooms === +roomsCountSelect.value;
 };
 
 const showByGuestsCount = ({offer}) => {
   if (guestsCountSelect.value === DEFAULT_OPTION_VALUE) {
     return true;
-  } return offer.guests === +guestsCountSelect.value;
+  }
+  return offer.guests === +guestsCountSelect.value;
 };
 
 const showByFeatures = (announcementA, announcementB) => {
